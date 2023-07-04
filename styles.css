@@ -1,0 +1,239 @@
+:root {
+    
+    /* Colors Primary */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%); 
+
+    /* Colors Neutral */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font sizes */
+    --font-title-mobile: 2.5rem;
+    --font-text-mobile: 1.1rem;
+    --font-name-review: 1rem;
+    --font-attribution: 0.8rem;
+
+    --font-title-desktop: 3rem;
+    --font-text-desktop: 1.2rem;
+
+    /* Border Radius */
+    --border-radius: 0.6em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat left top, url(images/bg-pattern-bottom-mobile.svg) no-repeat right bottom / contain;
+    display: grid;
+    justify-content: center;
+}
+
+main {
+    margin: 2em 0;
+    padding: 2em;
+    width: 370px;
+    display: grid;
+    place-content: center;
+}
+
+.title {
+   font-size: var(--font-title-mobile);
+   font-weight: 700;
+   color: var(--very-dark-magenta);
+   text-align: center;
+   padding: 0 0.5em;
+   margin-bottom: 0.3em;
+}
+
+.text {
+    font-size: var(--font-text-mobile);
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.ratings-container {
+    margin: 1.5em 0 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 330px;
+}
+
+.rating {
+    height: 80px;
+    background-color: var(--light-grayish-magenta);
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    text-align: center;
+    padding: 1.1em 0;
+    border-radius: var(--border-radius);
+}
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.4em;
+}
+
+.review {
+    width: 330px;
+    background-color: var(--very-dark-magenta);
+    border-radius: var(--border-radius);
+    margin: 0 auto 1em;
+    padding: 1.3em 2em;
+    display: grid;
+    grid-template-areas: 
+    "img user user"
+    "review review review"
+}
+
+.review > .image {
+    grid-area: img;
+}
+
+.review > .user {
+    grid-area: user;
+}
+
+.review > .review-text {
+    grid-area: review;
+}
+
+.image {
+    border-radius: 50%;
+    width: 65%;
+    align-self: center;
+    padding: 0;
+}
+
+.name {
+    color: var(--white);
+    font-size: var(--font-name-review);
+    font-weight: 500;
+}
+
+.verified-buyer {
+    color: var(--soft-pink);
+    font-size: var(--font-name-review);
+    font-weight: 400;
+    margin-top: -1em;
+    padding: 0;
+}
+
+.review-text {
+    color: var(--light-grayish-magenta);
+    line-height: 1.5em;
+    font-weight: 400;
+    font-size: var(--font-name-review);
+    margin-top: 0.5em;
+    
+}
+
+.attribution {
+    font-size: var(--font-attribution);
+    color: var(--very-dark-magenta);
+    text-align: center;
+    margin-top: 3em;
+  }
+
+  .attribution a {
+    color: var(--soft-pink);
+  }
+
+@media (min-width: 1200px) {
+
+    body {
+        min-height: 100vh;
+        background: url(images/bg-pattern-top-desktop.svg) no-repeat left top, url(images/bg-pattern-bottom-desktop.svg) no-repeat right bottom;
+    }
+
+    main {
+        width: 1100px;
+        padding: 0;
+        align-items: center;
+        grid-template-areas: 
+        "title rating"
+        "text rating"
+        "reviews reviews"
+        "footer footer";
+    }
+
+    main > .title {
+        grid-area: title;
+        font-size: var(--font-title-desktop);
+        text-align: start;
+        width: 350px;
+        padding: 0.5em 0 0;
+        margin: 1em 0 0.1em;
+    }
+
+    main > .text {
+        grid-area: text;
+        font-size: var(--font-text-desktop);
+        text-align: start;
+        width: 450px;
+        padding: 0;
+    }
+
+    main > .ratings-container {
+        grid-area: rating;
+        margin: 1em 0 0;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    main > .reviews-container {
+        grid-area: reviews;
+        display: flex;
+        gap: 2em;
+        margin-top: 3em;
+        padding: 0;
+    }
+
+    main > .attribution {
+        grid-area: footer;
+        margin-top: 1em;
+    }
+
+    .rating {
+        width: 400px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    .star {
+        width: 13%;
+    }
+
+    .s1 {
+        margin-right: 4em;
+    }
+
+    .s2 {
+        margin-right: 2em;
+    }
+
+    .review {
+        height: 255px;
+    }
+    
+    .r2 {
+        margin-top: 1.2em;
+    }
+
+    .r3 {
+        margin-top: 2.4em;
+    }
+}
