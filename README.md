@@ -7,6 +7,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshots](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Design](#design)
   - [Development](#development)
@@ -25,10 +26,13 @@ Users should be able to:
 
 ### Screenshots
 
-![](./images/social-proof-section-mobile-1.jpg)
-![](./images/social-proof-section-mobile-2.jpg)
-![](./images/social-proof-section-desktop.jpg)
+![](./images/social-proof-section-mobile-1.JPG)
+![](./images/social-proof-section-mobile-2.JPG)
+![](./images/social-proof-section-desktop.JPG)
 
+### Link
+
+- Live Site URL: (https://cerulean-speculoos-7961c4.netlify.app/)
 
 ## My process
 
