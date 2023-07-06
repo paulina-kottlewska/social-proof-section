@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: (https://cerulean-speculoos-7961c4.netlify.app/)
+- Live Site URL: (social-proof-section-pk.netlify.app)
 
 ## My process
 
